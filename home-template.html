@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>網站名稱</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background-color: #f1f5f9;
+    }
+
+    .page {
+      width: 100%;
+      margin: 0;
+      padding: 0 0 48px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.12);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #bfdbfe;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      font-size: 0.86rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    .intro {
+      max-width: 820px;
+      margin: 14px auto 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.08rem;
+    }
+
+    .welcome-box {
+      max-width: 1100px;
+      margin: 40px auto 30px;
+      padding: 25px;
+      background: #ffffff;
+      border-left: 5px solid #3b82f6;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04);
+    }
+
+    .welcome-box h3 {
+      margin: 0 0 10px;
+      color: #1e3a8a;
+      font-size: 1.2rem;
+    }
+
+    .welcome-box p {
+      margin: 0;
+      color: #475569;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .course-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 260px;
+      padding: 25px;
+      color: inherit;
+      text-decoration: none;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -1px rgba(15, 23, 42, 0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .course-card:hover,
+    .course-card:focus-visible {
+      transform: translateY(-5px);
+      border-color: #bfdbfe;
+      box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -2px rgba(15, 23, 42, 0.05);
+      outline: none;
+    }
+
+    .course-number {
+      display: block;
+      margin-bottom: 8px;
+      color: #3b82f6;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: #0f172a;
+      font-size: 20px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .course-card p {
+      margin: 0 0 20px;
+      color: #64748b;
+      font-size: 15px;
+      flex-grow: 1;
+    }
+
+    .meta-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #f1f5f9;
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    .badge {
+      padding: 3px 8px;
+      color: #475569;
+      background-color: #f1f5f9;
+      border-radius: 4px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .open-label {
+      display: block;
+      margin-top: auto;
+      padding: 10px 20px;
+      color: #ffffff;
+      background-color: #2563eb;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 700;
+      transition: background-color 0.2s ease;
+    }
+
+    .course-card:hover .open-label,
+    .course-card:focus-visible .open-label {
+      background-color: #1d4ed8;
+    }
+
+    footer {
+      max-width: 1100px;
+      margin: 60px auto 0;
+      padding: 20px;
+      color: #94a3b8;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 42px 18px;
+      }
+
+      .welcome-box {
+        margin: 24px 12px 20px;
+      }
+
+      .course-grid {
+        grid-template-columns: 1fr;
+        padding: 0 12px;
+      }
+
+      .course-card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">COURSE WEBSITE</p>
+      <h1>網站主標題</h1>
+      <p class="intro">
+        在這裡放網站簡介。說明這個網站適合誰、會學到什麼、每個課程頁包含哪些內容。
+      </p>
+    </header>
+
+    <section class="welcome-box">
+      <h3>學習方式</h3>
+      <p>
+        在這裡放使用說明，例如建議依序閱讀課程、先看核心概念，再看例子，最後完成測驗。
+      </p>
+    </section>
+
+    <section class="course-grid" aria-label="課程列表">
+      <a class="course-card" href="course1.html">
+        <span class="course-number">課程 1</span>
+        <h2>課程標題一</h2>
+        <p>在這裡放課程簡介，說明這一課會學到的核心概念與應用情境。</p>
+        <div class="meta-info">
+          <span>學習重點</span>
+          <span class="badge">關鍵字</span>
+        </div>
+        <span class="open-label">開始學習</span>
+      </a>
+
+      <a class="course-card" href="course2.html">
+        <span class="course-number">課程 2</span>
+        <h2>課程標題二</h2>
+        <p>複製這張卡片即可新增更多課程。記得修改 href、標題、簡介和 badge。</p>
+        <div class="meta-info">
+          <span>學習重點</span>
+          <span class="badge">關鍵字</span>
+        </div>
+        <span class="open-label">開始學習</span>
+      </a>
+    </section>
+
+    <footer>
+      在這裡放網站頁尾文字。
+    </footer>
+  </main>
+
+  <script>
+    document.querySelectorAll(".course-card").forEach(function (card) {
+      card.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          window.location.href = card.getAttribute("href");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

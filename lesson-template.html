@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>課程標題</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.7;
+      color: #333333;
+      background-color: #f8fafc;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -1px rgba(15, 23, 42, 0.06);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      padding: 10px 18px;
+      color: #ffffff;
+      background-color: #2563eb;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .back-link:hover,
+    .back-link:focus-visible {
+      background-color: #1d4ed8;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    header,
+    section {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #3b82f6;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      font-size: 0.86rem;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      padding-bottom: 12px;
+      color: #1e3a8a;
+      border-bottom: 3px solid #3b82f6;
+      font-size: 28px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 30px 0 16px;
+      padding-left: 10px;
+      color: #1e40af;
+      border-left: 4px solid #3b82f6;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: #334155;
+      font-size: 17px;
+    }
+
+    p {
+      margin: 0 0 16px;
+      font-size: 16px;
+    }
+
+    ul {
+      margin: 0 0 16px;
+      padding-left: 1.4rem;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .lead {
+      color: #475569;
+      font-size: 17px;
+    }
+
+    .note {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      border-radius: 0 8px 8px 0;
+      color: #1e3a8a;
+    }
+
+    .quiz {
+      margin: 20px 0;
+      padding: 25px;
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+    }
+
+    .quiz p {
+      margin-bottom: 14px;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .option {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px 12px;
+      color: #334155;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .option:hover,
+    .option:focus-visible {
+      background: #f1f5f9;
+      border-color: #94a3b8;
+      outline: none;
+    }
+
+    .option.correct {
+      background-color: #dcfce7;
+      border-color: #86efac;
+      color: #166534;
+    }
+
+    .option.wrong {
+      background-color: #fee2e2;
+      border-color: #fecaca;
+      color: #991b1b;
+    }
+
+    .feedback {
+      display: none;
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 6px;
+      background: #eef2ff;
+      color: #334155;
+      font-weight: 600;
+    }
+
+    .feedback strong.correct-text {
+      color: #166534;
+    }
+
+    .feedback strong.wrong-text {
+      color: #991b1b;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 20px 12px;
+      }
+
+      .page {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .quiz {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <a class="back-link" href="index.html">返回首頁</a>
+
+    <header>
+      <p class="eyebrow">COURSE 1</p>
+      <h1>課程主標題</h1>
+      <p class="lead">
+        在這裡放課程導言。用一段話說明這一課的核心問題、學習目標，以及為什麼這個主題值得學。
+      </p>
+    </header>
+
+    <section>
+      <h2>核心概念解釋</h2>
+      <p>
+        在這裡用清楚、深入淺出的方式解釋主要概念。建議先定義名詞，再拆成幾個小重點。
+      </p>
+
+      <h3>重點一</h3>
+      <p>
+        在這裡補充第一個重點。可以用「先講結論，再解釋原因，再舉簡短例子」的方式撰寫。
+      </p>
+
+      <h3>重點二</h3>
+      <ul>
+        <li><strong>關鍵詞：</strong>在這裡說明第一個關鍵詞。</li>
+        <li><strong>關鍵詞：</strong>在這裡說明第二個關鍵詞。</li>
+        <li><strong>關鍵詞：</strong>在這裡說明第三個關鍵詞。</li>
+      </ul>
+
+      <div class="note">
+        在這裡放提示、總結、記憶口訣或特別容易混淆的地方。
+      </div>
+    </section>
+
+    <section>
+      <h2>生動的生活例子</h2>
+      <h3>例子標題</h3>
+      <p>
+        在這裡放生活化例子。建議描述一個具體情境，然後指出它和核心概念之間的關係。
+      </p>
+      <p>
+        如果需要，可以再補充反例、常見誤解或現代應用。
+      </p>
+    </section>
+
+    <section>
+      <h2>課後小測驗</h2>
+
+      <div class="quiz">
+        <p>1. 在這裡放第一題單選題？</p>
+        <button class="option" data-correct="true" data-explain="正確。這裡放詳細答案解析，說明為什麼這個選項正確。">A. 正確選項</button>
+        <button class="option" data-correct="false" data-explain="錯誤。這裡說明這個選項為什麼不符合題意。">B. 錯誤選項</button>
+        <button class="option" data-correct="false" data-explain="錯誤。這裡說明這個選項混淆了哪些概念。">C. 錯誤選項</button>
+        <button class="option" data-correct="false" data-explain="錯誤。這裡說明排除這個答案的理由。">D. 錯誤選項</button>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="quiz">
+        <p>2. 在這裡放第二題單選題？</p>
+        <button class="option" data-correct="false" data-explain="錯誤。這裡放答案解析。">A. 錯誤選項</button>
+        <button class="option" data-correct="true" data-explain="正確。這裡放詳細答案解析，最好能重新連回課程核心概念。">B. 正確選項</button>
+        <button class="option" data-correct="false" data-explain="錯誤。這裡放答案解析。">C. 錯誤選項</button>
+        <button class="option" data-correct="false" data-explain="錯誤。這裡放答案解析。">D. 錯誤選項</button>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll(".quiz").forEach(function (quiz) {
+      var buttons = quiz.querySelectorAll(".option");
+      var feedback = quiz.querySelector(".feedback");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          buttons.forEach(function (item) {
+            item.classList.remove("correct", "wrong");
+          });
+
+          var isCorrect = button.dataset.correct === "true";
+          button.classList.add(isCorrect ? "correct" : "wrong");
+          feedback.style.display = "block";
+          feedback.innerHTML = "<strong class=\"" + (isCorrect ? "correct-text" : "wrong-text") + "\">" + (isCorrect ? "正確" : "錯誤") + "。</strong>" + button.dataset.explain;
+        });
+      });
+    });
+  </script>
+</body>
+</html>
